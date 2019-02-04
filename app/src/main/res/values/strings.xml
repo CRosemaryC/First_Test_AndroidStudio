@@ -2,4 +2,6 @@
     <string name="app_name">Colour Messages</string>
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
+    <string name="display_text">Waiting for Message</string>
+    <string name="button_green">Green</string>
 </resources>
