@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.util.Log;
 import static android.provider.AlarmClock.EXTRA_MESSAGE;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
 
 //    This are examples to see the activities of the app in the Logcat
     @Override

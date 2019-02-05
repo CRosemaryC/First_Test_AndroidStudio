@@ -3,5 +3,16 @@
     <string name="edit_message">Enter a message</string>
     <string name="button_send">Send</string>
     <string name="display_text">Waiting for Message</string>
-    <string name="button_green">Green</string>
+    <string name="button_colour">Apply</string>
+    
+    <string-array name="colours_types">
+        <item>Green</item>
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Purple</item>
+        <item>Black</item>
+    </string-array>
 </resources>

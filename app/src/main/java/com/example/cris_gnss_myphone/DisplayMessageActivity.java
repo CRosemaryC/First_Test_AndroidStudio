@@ -5,6 +5,7 @@ import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -50,41 +51,65 @@ public class DisplayMessageActivity extends AppCompatActivity {
 //
 //        setContentView(myLayout);
 
-        Button button_green = findViewById(R.id.button2); // we define out button that we created in the xml
-        button_green.setOnClickListener(
-                // now we add a call back method which is a method that is going to be called when a click event related to this button occurs.
-                new Button.OnClickListener(){
-
-                    // The following is the call back method
-                    public void onClick(View myView){
-                        TextView myText = findViewById(R.id.textView);
-                        myText.setTextColor(Color.GREEN);
-                     }
-                }
-
-        );
-
-        // We are going to use a long click listener which is a button that has to be hold more time to be activated
-        button_green.setOnLongClickListener(
-                new Button.OnLongClickListener(){
-
-                    public boolean onLongClick(View myView){  // now is boolean beacause we expect a true or a false
-                        TextView myText = findViewById(R.id.textView);
-                        myText.setTextColor(Color.parseColor("#009688"));
-                        return true;
-
-                    }
-
-                }
 
 
-        );
+        // *** The following code is just for the button without the spineer
 
 
+//        Button button_colour = findViewById(R.id.button2); // we define out button that we created in the xml
+//        button_colour.setOnClickListener(
+//                // now we add a call back method which is a method that is going to be called when a click event related to this button occurs.
+//                new Button.OnClickListener(){
+//
+//                    // The following is the call back method
+//                    public void onClick(View myView){
+//                        TextView myText = findViewById(R.id.textView);
+//                        myText.setTextColor(Color.GREEN);
+//                     }
+//                }
+//
+//        );
+//
+//        // We are going to use a long click listener which is a button that has to be hold more time to be activated
+//        button_colour.setOnLongClickListener(
+//                new Button.OnLongClickListener(){
+//
+//                    public boolean onLongClick(View myView){  // now is boolean beacause we expect a true or a false
+//                        TextView myText = findViewById(R.id.textView);
+//                        myText.setTextColor(Color.parseColor("#009688"));
+//                        return true;
+//                    }
+//                }
+//
+//        );
 
 
     }
 
+    public void onClickFindColour (View view){
+        TextView myText = findViewById(R.id.textView);
+        Spinner colourtype = findViewById(R.id.spinner_color);
+
+        String colourselect = String.valueOf(colourtype.getSelectedItem());
+
+        if (colourselect.equals("Blue")) {
+            myText.setTextColor(getColor(R.color.colorblue));
+        }else if (colourselect.equals("Green")) {
+            myText.setTextColor(getColor(R.color.colorgreen));
+        }else if (colourselect.equals("Red")) {
+            myText.setTextColor(getColor(R.color.colorred));
+        }else if (colourselect.equals("Yellow")) {
+            myText.setTextColor(getColor(R.color.coloryellow));
+        }else if (colourselect.equals("Orange")) {
+            myText.setTextColor(getColor(R.color.colororange));
+        }else if (colourselect.equals("Pink")) {
+            myText.setTextColor(getColor(R.color.colorpink));
+        }else if (colourselect.equals("Purple")) {
+            myText.setTextColor(getColor(R.color.colorpurple));
+        }else {
+            myText.setTextColor(getColor(R.color.colorblack));
+        }
+
+    }
 
 }
-
