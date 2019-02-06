@@ -4,6 +4,7 @@
     <string name="button_send">Send</string>
     <string name="display_text">Waiting for Message</string>
     <string name="button_colour">Apply</string>
+    <string name="button_back">Back</string>
     
     <string-array name="colours_types">
         <item>Green</item>

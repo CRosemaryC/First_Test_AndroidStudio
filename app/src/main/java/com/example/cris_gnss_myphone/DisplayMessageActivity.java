@@ -112,4 +112,8 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
     }
 
+    public void onClickBack(View view) {
+        Intent intentBack = new Intent(this, MainActivity.class);
+        startActivity(intentBack);
+    }
 }
